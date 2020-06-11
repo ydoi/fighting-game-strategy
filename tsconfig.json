@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2019",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "module": "es2015",
     "jsx": "react",
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "moduleResolution": "node",
+    "lib": [
+      "es2020",
+      "dom"
+    ]
   }
 }
