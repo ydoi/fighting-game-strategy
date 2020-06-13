@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
@@ -11,6 +13,9 @@ module.exports = {
     path: `${__dirname}/dist`,
     // 出力ファイル名
     filename: "index.js"
+  },
+  devServer: {
+    contentBase: `${__dirname}/dist`,
   },
   module: {
     rules: [
