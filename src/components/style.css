@@ -1,0 +1,7 @@
+table, th, td {
+  border: 1px solid black;
+}
+
+.FrameDataTable__table {
+  border-collapse: collapse;
+}

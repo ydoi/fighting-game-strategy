@@ -24,6 +24,16 @@ module.exports = {
         test: /\.tsx?$/,
         // TypeScript をコンパイルする
         use: "ts-loader"
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: { url: false }
+          }
+        ]
       }
     ]
   },
