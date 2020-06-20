@@ -16,6 +16,11 @@ type Props = {
 }
 
 export const FrameDataTable = (props: Props) => {
+  const frameWidth = (frame) => {
+    return {
+      width: `${frame * 10}px`,
+    };
+  };
   return (
     <table className="FrameDataTable__table">
       <tr>
@@ -39,7 +44,13 @@ export const FrameDataTable = (props: Props) => {
               <td>{ s.name }</td>
               <td>{ s.damage }</td>
               <td>{ s.gauge }</td>
-              <td>{ `${s.generateFrame} ${s.continuousFrame} ${s.stiffnessFrame}` }</td>
+              <td>
+                <div className="Overall-frame__container">
+                  <p className="FrameData__table-span--generate" style={ frameWidth(s.generateFrame) }>{ s.generateFrame }</p>
+                  <p className="FrameData__table-span--continuous" style={ frameWidth(s.continuousFrame) }>{ s.continuousFrame }</p>
+                  <p className="FrameData__table-span--stiffness" style={ frameWidth(s.stiffnessFrame) }>{ s.stiffnessFrame }</p>
+                </div>
+              </td>
             </tr>
           )
         })

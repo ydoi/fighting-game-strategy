@@ -5,3 +5,19 @@ table, th, td {
 .FrameDataTable__table {
   border-collapse: collapse;
 }
+
+.Overall-frame__container {
+  display: flex;
+}
+
+.FrameData__table-span--generate {
+  background-color: aqua;
+}
+
+.FrameData__table-span--continuous {
+  background-color: orange;
+}
+
+.FrameData__table-span--stiffness {
+  background-color: red;
+}
