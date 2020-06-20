@@ -46,9 +46,9 @@ export const FrameDataTable = (props: Props) => {
               <td>{ s.gauge }</td>
               <td>
                 <div className="Overall-frame__container">
-                  <p className="FrameData__table-span--generate" style={ frameWidth(s.generateFrame) }>{ s.generateFrame }</p>
-                  <p className="FrameData__table-span--continuous" style={ frameWidth(s.continuousFrame) }>{ s.continuousFrame }</p>
-                  <p className="FrameData__table-span--stiffness" style={ frameWidth(s.stiffnessFrame) }>{ s.stiffnessFrame }</p>
+                  <div className="FrameData__table-span--generate" style={ frameWidth(s.generateFrame) }>{ s.generateFrame }</div>
+                  <div className="FrameData__table-span--continuous" style={ frameWidth(s.continuousFrame) }>{ s.continuousFrame }</div>
+                  <div className="FrameData__table-span--stiffness" style={ frameWidth(s.stiffnessFrame) }>{ s.stiffnessFrame }</div>
                 </div>
               </td>
             </tr>
