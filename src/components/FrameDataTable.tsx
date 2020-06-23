@@ -2,10 +2,10 @@ import React from "react";
 
 import "./style.css";
 
-type SkillData = {
+export type SkillData = {
   name: string;
   damage: number;
-  gauge: number;
+  // gauge: number;
   generateFrame: number;
   continuousFrame: number;
   stiffnessFrame: number;
@@ -29,7 +29,7 @@ export const FrameDataTable = (props: Props) => {
         {/* <th>コマンド</th> */}
         <th>ダメージ</th>
         {/* <th>スタン値</th> */}
-        <th>ゲージ増加</th>
+        {/* <th>ゲージ増加</th> */}
         {/* <th>キャンセル</th> */}
         <th>全体フレーム(発生/持続/硬直)</th>
         {/* <th>ガード硬直差</th> */}
@@ -43,7 +43,7 @@ export const FrameDataTable = (props: Props) => {
             <tr>
               <td>{ s.name }</td>
               <td>{ s.damage }</td>
-              <td>{ s.gauge }</td>
+              {/* <td>{ s.gauge }</td> */}
               <td>
                 <div className="Overall-frame__container">
                   <div className="FrameData__table-span--generate" style={ frameWidth(s.generateFrame) }>{ s.generateFrame }</div>
