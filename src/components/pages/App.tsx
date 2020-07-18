@@ -4,6 +4,8 @@ import { FrameDataTable, SkillData } from "../FrameDataTable";
 import { CharacterSelect } from "../CharacterSelect";
 import ryuData from "../../../data/json/ryu.json";
 import kenData from "../../../data/json/ken.json";
+import sethData from "../../../data/json/seth.json";
+import alexData from "../../../data/json/alex.json";
 
 let lineData: SkillData = {
   name: '',
@@ -16,6 +18,8 @@ let lineData: SkillData = {
 const getCharacterData = {
   'リュウ': ryuData,
   'ケン': kenData,
+  'セス': sethData,
+  'アレックス': alexData,
 }
 
 const generateProps = (character) => {
@@ -38,7 +42,7 @@ export const App = () => {
   return (
     <div>
       <h1>Fighting Game Strategy</h1>
-      <CharacterSelect characters = { ['リュウ', 'ケン'] } onChange = { (selected) => setCharacter(selected) } />
+      <CharacterSelect characters = { ['リュウ', 'ケン', 'セス', 'アレックス'] } onChange = { (selected) => setCharacter(selected) } />
       <FrameDataTable skillDatas = { generateProps(character) } />
     </div>
   );
