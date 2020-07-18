@@ -31,12 +31,15 @@ const generateProps = (character) => {
     if (index === 17) return lineData;
     return {
       name: line[0],
+      command: line[1],
       damage: Number(line[7]),
       generateFrame: Number(line[2]),
       continuousFrame: Number(line[3]),
       stiffnessFrame: Number(line[4]),
       hitFrame: Number(line[5]),
       guardFrame: Number(line[6]),
+      passiveFrame: Number(line[15]),
+      backPassiveFrame: Number(line[16]),
     }
   });
 }
