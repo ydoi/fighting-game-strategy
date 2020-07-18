@@ -13,6 +13,8 @@ let lineData: SkillData = {
   generateFrame: null,
   continuousFrame: null,
   stiffnessFrame: null,
+  hitFrame: null,
+  guardFrame: null,
 };
 
 const getCharacterData = {
@@ -33,6 +35,8 @@ const generateProps = (character) => {
       generateFrame: Number(line[2]),
       continuousFrame: Number(line[3]),
       stiffnessFrame: Number(line[4]),
+      hitFrame: Number(line[5]),
+      guardFrame: Number(line[6]),
     }
   });
 }

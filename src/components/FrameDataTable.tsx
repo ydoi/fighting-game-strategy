@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./style.css";
+import "./FrameDataTable.css";
 
 export type SkillData = {
   name: string;
@@ -9,6 +9,8 @@ export type SkillData = {
   generateFrame: number;
   continuousFrame: number;
   stiffnessFrame: number;
+  hitFrame: number;
+  guardFrame: number;
 }
 
 type Props = {
@@ -32,8 +34,8 @@ export const FrameDataTable = (props: Props) => {
         {/* <th>ゲージ増加</th> */}
         {/* <th>キャンセル</th> */}
         <th>全体フレーム(発生/持続/硬直)</th>
-        {/* <th>ガード硬直差</th> */}
-        {/* <th>ヒット硬直差</th> */}
+        <th>ガード硬直差</th>
+        <th>ヒット硬直差</th>
         {/* <th>Vトリガーキャンセル硬直差</th> */}
         {/* <th>Vトリガーヒット硬直差</th> */}
       </tr>
@@ -51,6 +53,8 @@ export const FrameDataTable = (props: Props) => {
                   <div className="FrameData__table-span--stiffness" style={ frameWidth(s.stiffnessFrame) }>{ s.stiffnessFrame }</div>
                 </div>
               </td>
+              <td>{ s.hitFrame }</td>
+              <td>{ s.guardFrame }</td>
             </tr>
           )
         })
